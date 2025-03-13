@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/lifecycle"
+        android:textColor="@color/white"
+        android:background="#222"
+        android:paddingTop="8dp"
+        android:paddingHorizontal="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#E0E0E0"
+        android:gravity="end|center_vertical"
+        android:padding="16dp"
+        android:text="@string/zero"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.1"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="4dp"
+        android:layout_marginTop="2dp"
+        >
+        <!-- Hàng 1 -->
+        <Button android:text="CE" style="@style/OtherButton" android:onClick="onClearEntry"/>
+        <Button android:text="C" style="@style/OtherButton" android:onClick="onClear"/>
+        <Button android:text="BS" style="@style/OtherButton" android:onClick="onBackspace"/>
+        <Button android:text="/" style="@style/OtherButton" android:onClick="onOperatorClick"/>
+
+        <!-- Hàng 2 -->
+        <Button android:text="7" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="8" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="9" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="x" style="@style/OtherButton" android:onClick="onOperatorClick"/>
+
+        <!-- Hàng 3 -->
+        <Button android:text="4" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="5" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="6" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="-" style="@style/OtherButton" android:onClick="onOperatorClick"/>
+
+        <!-- Hàng 4 -->
+        <Button android:text="1" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="2" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="3" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="+" style="@style/OtherButton" android:onClick="onOperatorClick"/>
+
+        <!-- Hàng 5 -->
+        <Button android:text="+/-" style="@style/OtherButton" android:onClick="onToggleSign"/>
+        <Button android:text="0" style="@style/NumberButton" android:onClick="onDigitClick"/>
+        <Button android:text="." style="@style/OtherButton"/>
+        <Button android:text="=" style="@style/OtherButton"  android:onClick="onEqualClick"/>
+
+
+    </GridLayout>
+
+</LinearLayout>
